@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat center center/cover;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5em;
+    padding: 2.5rem 2rem;
+    border-radius: 1.5em;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgb(8, 8, 8);
+    width: 340px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.info h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.info p {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+    width: 100%;
+}
+
+.number-grid .box p:first-child {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.number-grid .box p:last-child {
+    font-weight: 400;
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.profile-card .btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+.btn-box button {
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-box .follow {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+
+.btn-box .follow:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.btn-box .message {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-box .message:hover {
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 480px) {
+    .profile-card {
+        width: 90%;
+        padding: 2rem 1.5rem;
+    }
+
+    .btn-box button {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+}
